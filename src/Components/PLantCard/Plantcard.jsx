@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Plantcard = ({plant}) => {
-    console.log(plant)
-    const {name,price,category,image,description
+   
+    const {name,price,category,image,description,id
 } = plant
     return (
         <div>
@@ -30,9 +31,9 @@ const Plantcard = ({plant}) => {
 
     <div class="flex items-center justify-between mt-6">
       <span class="text-3xl font-extrabold text-green-700">৳{price}</span>
-      <button class="bg-gray-900 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-xl transition-colors duration-200">
+      <Link to={`/plant/${id}`}  class="bg-gray-900 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-xl transition-colors duration-200">
         Add to Cart
-      </button>
+      </Link>
     </div>
   </div>
 </div> 
