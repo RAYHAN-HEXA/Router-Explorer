@@ -1,7 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
+import TheameToggle from '../TheameToggle';
 
 const Plantcard = ({plant}) => {
+  const navigate = useNavigate();
+
    
     const {name,price,category,image,description,id
 } = plant
@@ -31,10 +34,12 @@ const Plantcard = ({plant}) => {
 
     <div class="flex items-center justify-between mt-6">
       <span class="text-3xl font-extrabold text-green-700">৳{price}</span>
-      <Link to={`/plant/${id}`}  class="bg-gray-900 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-xl transition-colors duration-200">
+      <button onClick={()=> navigate(`/plant/${id}`, {state: plant})}  class="bg-gray-900 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-xl transition-colors duration-200">
         Add to Cart
-      </Link>
+      </button>
+      
     </div>
+    
   </div>
 </div> 
         </div>

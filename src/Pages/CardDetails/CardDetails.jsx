@@ -1,7 +1,10 @@
 
-import { useLoaderData, } from 'react-router';
+import {  useLocation, } from 'react-router';
 
 const CardDetails = () => {
+
+    const location = useLocation();
+    console.log(location.state)
     
 //   const { id } = useParams()
  
@@ -22,9 +25,10 @@ const CardDetails = () => {
         
 //         )
 //   })
-const {data} = useLoaderData();
-console.log(data)
-  const {name,price,category,image,description} = data.plants;
+// const {data} = useLoaderData();
+// console.log(data)
+  const { name,price,category,image,description }
+   = location.state || {};
  
   
  

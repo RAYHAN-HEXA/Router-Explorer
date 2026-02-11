@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import TheameToggle from '../TheameToggle';
 
 const Navbar = () => {
     return (
@@ -51,6 +52,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
 <Link to='/' >Button</Link>
+<TheameToggle className= 'bg-amber-50'></TheameToggle>
   </div>
 </div>
     );
