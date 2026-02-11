@@ -1,13 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useLoaderData, useParams } from 'react-router';
 
 const CardDetails = () => {
     
-  const { id } = useParams()
+//   const { id } = useParams()
  
   const [plant,setPlant] = useState({})
-  useEffect(() => {
+//   useEffect(() => {
     // fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
     //   .then(res => res.json())
     //   .then(data =>
@@ -15,15 +15,17 @@ const CardDetails = () => {
    
         
     //     )
-     axios(`https://openapi.programming-hero.com/api/plant/${id}`)
+//     //  axios(`https://openapi.programming-hero.com/api/plant/${id}`)
     
-      .then(data =>
-        setPlant(data?.data?.plants)
+//       .then(data =>
+//         setPlant(data?.data?.plants)
    
         
-        )
-  })
-  const {name,price,category,image,description} = plant;
+//         )
+//   })
+const {data} = useLoaderData();
+console.log(data)
+  const {name,price,category,image,description} = data.plants;
  
   
  
