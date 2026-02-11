@@ -7,7 +7,7 @@ import Home from './Pages/Home/Home.jsx'
 import Contact from './Pages/Contact/Contact.jsx'
 import About from './Pages/About/About.jsx'
 import Rootlayout from './Layout/RootLayOut/Rootlayout.jsx'
-import PlayerCardDetails from './Pages/PlayerCardDetails/PlayerCardDetails.jsx'
+import CardDetails from './Pages/CardDetails/CardDetails.jsx'
 
 
 
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
 },
 {
   path : '/plant/:id',
-  Component : PlayerCardDetails, 
+  Component : CardDetails, 
 },
   ]
  

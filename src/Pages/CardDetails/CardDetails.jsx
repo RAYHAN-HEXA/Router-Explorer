@@ -1,16 +1,24 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
-const PlayerCardDetails = () => {
+const CardDetails = () => {
     
   const { id } = useParams()
  
   const [plant,setPlant] = useState({})
   useEffect(() => {
-    fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
-      .then(res => res.json())
+    // fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
+    //   .then(res => res.json())
+    //   .then(data =>
+    //      setPlant(data?.plants)
+   
+        
+    //     )
+     axios(`https://openapi.programming-hero.com/api/plant/${id}`)
+    
       .then(data =>
-         setPlant(data?.plants)
+        setPlant(data?.data?.plants)
    
         
         )
@@ -70,4 +78,4 @@ const PlayerCardDetails = () => {
     );
 };
 
-export default PlayerCardDetails;
+export default CardDetails;
