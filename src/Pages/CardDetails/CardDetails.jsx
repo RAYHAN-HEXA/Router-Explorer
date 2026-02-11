@@ -1,12 +1,11 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
+
+import { useLoaderData, } from 'react-router';
 
 const CardDetails = () => {
     
 //   const { id } = useParams()
  
-  const [plant,setPlant] = useState({})
+
 //   useEffect(() => {
     // fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
     //   .then(res => res.json())

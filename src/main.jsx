@@ -9,6 +9,7 @@ import About from './Pages/About/About.jsx'
 import Rootlayout from './Layout/RootLayOut/Rootlayout.jsx'
 import CardDetails from './Pages/CardDetails/CardDetails.jsx'
 import axios from 'axios'
+import Spinner from './Components/Spinner.jsx'
 
 
 
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
  {
   path : '/',
   Component : Rootlayout,
+ hydrateFallbackElement : <Spinner></Spinner>,
   children : [
      {
     index : true,
